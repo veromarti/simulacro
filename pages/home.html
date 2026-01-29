@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RestorApp - Home</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./../styles/home.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-container">
+        <div class="logo">
+          <span></span>
+          <h2>RestorApp</h2>
+        </div>
+
+        <nav class="nav">
+          <a href="./../pages/home.html"><strong>Menu</strong></a>
+          <a href="./../pages/orders.html"><strong>My Orders</strong></a>
+          <a href="./../pages/profile.html"><strong>Profile</strong></a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="filters">
+        <h2>Filters</h2>
+
+        <select id="category" name="category" required>
+          <option value="" selected disabled>Category</option>
+          <option value="process">Process</option>
+          <option value="research">Research</option>
+          <option value="product">Product</option>
+          <option value="improvement">Improvement</option>
+          <option value="experiment">Experiment</option>
+          <option value="other">Other</option>
+        </select>
+
+        <select id="author" name="author" required>
+          <option value="" selected disabled>Author</option>
+        </select>
+        <div class="show-all">
+          <span>Reset</span>
+          <label class="switch">
+            <input type="checkbox" id="resetBtn" />
+            <span class="slider-round"></span>
+          </label>
+        </div>
+      </section>
+
+      <section id="home" class="home">
+        <section id="menu" class="menu">
+          <section id="products-menu" class="products">
+            <!-- Products renderization -->
+          </section>
+        </section>
+        <section id="order-panel" class="order-panel">
+          <section id="order-products" class="order-products">
+            <h5 class="card-title">Your Order</h5>
+            <section class="card-added">
+              <div class="card-body">
+                <article class="added-product">
+                  <img
+                    class="card-img-top"
+                    src="./../assets/media/bacon-burger.jpg"
+                  />
+                  <section class="order-details">
+                    <div class="product-info">
+                      <h6>Product Name</h6>
+                      <h6>Product Price</h6>
+                    </div>
+                    <div class="actions">
+                      <button>add/remove</button>
+                    </div>
+                  </section>
+                </article>
+              </div>
+            </section>
+          </section>
+          <section class="order-total">
+            <div id="subtotal">
+              <p>Subtotal</p>
+              <p>$0.0</p>
+            </div>
+            <div id="tax">
+              <p>Tax (8%)</p>
+              <p>$0.0</p>
+            </div>
+            <div id="total">
+              <h6><strong>Total</strong></h6>
+              <h6><strong><span>$0.0</span></strong></h6>
+            </div>
+          </section>
+          <button>Confirm Order</button>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <h3>CRUDZASO · IdeaHub</h3>
+          <p>Internal collaborative platform for sharing and evolving ideas.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="./../pages/feed.html">Ideas</a></li>
+            <li><a href="./../pages/profile.html">Profile</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-meta">
+          <h4>Project</h4>
+          <p>Frontend-only demo</p>
+          <p>Built with Vanilla JS</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 CRUDZASO · IdeaHub</span>
+      </div>
+    </footer>
+
+    <script type="module" src="./../js/home.js"></script>
+    <script type="module" src="./../js/products.js"></script>
+  </body>
+</html>
